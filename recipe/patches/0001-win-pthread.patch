@@ -1,6 +1,6 @@
-From ad5d1861f68660d4cd8e5485904f054a2a717b19 Mon Sep 17 00:00:00 2001
-From: Mervin Fansler <mmfansler@gmail.com>
-Date: Sat, 20 Sep 2025 18:20:06 +0200
+From de575fda4800bd138c2a424b3823389ad025fa2c Mon Sep 17 00:00:00 2001
+From: Mervin Fansler <mervin.fansler@bric.ku.dk>
+Date: Thu, 11 Jun 2026 10:18:00 +0200
 Subject: [PATCH] win pthread
 
 ---
@@ -8,13 +8,13 @@ Subject: [PATCH] win pthread
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/Makevars.win b/src/Makevars.win
-index 3d161f1..10ebacd 100644
+index b0b08ea..9dfe90e 100644
 --- a/src/Makevars.win
 +++ b/src/Makevars.win
 @@ -24,7 +24,7 @@ else
  endif
  
- PKG_CPPFLAGS = $(ABSL_CFLAGS) $(OPENSSL_CFLAGS) -DSTRICT_R_HEADERS -DS2_USE_EXACTFLOAT -D_USE_MATH_DEFINES -DNDEBUG -DOMIT_STRPTIME -I../src
+ PKG_CPPFLAGS = $(ABSL_CFLAGS) $(OPENSSL_CFLAGS) -DSTRICT_R_HEADERS -DRCPP_NO_MASK_RF_ERROR -DS2_USE_EXACTFLOAT -D_USE_MATH_DEFINES -DNDEBUG -DOMIT_STRPTIME -I../src
 -PKG_LIBS = $(ABSL_LIB_FLAGS) $(OPENSSL_LIB_FLAGS)
 +PKG_LIBS = $(ABSL_LIB_FLAGS) $(OPENSSL_LIB_FLAGS) -pthread
  

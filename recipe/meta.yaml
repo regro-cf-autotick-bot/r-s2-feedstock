@@ -1,4 +1,4 @@
-{% set version = "1.1.9" %}
+{% set version = "1.1.11" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/s2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/s2/s2_{{ version }}.tar.gz
-  sha256: 4dcd2bff738be5a89b925fed29acb6e224e0f514b4530dc9987a0a72c5a99b55
+  sha256: 5fa4abaf21a8c4b34e811f75c0c5a13044afc5704f1b04af88a0e0bd541f9b5b
   patches:
     - patches/0001-win-pthread.patch
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -67,8 +67,8 @@ about:
   dev_url: https://github.com/r-spatial/s2
   doc_url: https://s2geometry.io/
   license: Apache-2.0
-  summary: Provides R bindings for Google's s2 library for geometric calculations on the sphere. High-performance constructors and exporters provide high compatibility with existing spatial packages, transformers construct new geometries from existing geometries, predicates provide a means to select geometries based on spatial
-    relationships, and accessors extract information about geometries.
+  summary: Provides R bindings for Google's s2 library for geometric calculations on the sphere. High-performance constructors and exporters provide high compatibility with existing spatial packages, transformers construct new geometries from existing geometries, predicates provide a means to select geometries based on
+    spatial relationships, and accessors extract information about geometries.
   license_family: APACHE
   license_file:
     - LICENSE
