@@ -1,4 +1,4 @@
-{% set version = "1.1.11" %}
+{% set version = "1.1.12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/s2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/s2/s2_{{ version }}.tar.gz
-  sha256: 5fa4abaf21a8c4b34e811f75c0c5a13044afc5704f1b04af88a0e0bd541f9b5b
+  sha256: ec3cebd5f9dcacf7398a0b7a3c1e41d57f9cacfb1c6503b0e6acf19fcfa5c41e
   patches:
     - patches/0001-win-pthread.patch
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
